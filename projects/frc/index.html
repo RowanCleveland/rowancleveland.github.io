@@ -1,20 +1,59 @@
-index.html
-about/
-    index.html
-projects/
-    frc/
-        index.html
-    truss/
-        index.html
-    cad/
-        index.html
-    tutorials/
-        index.html
-assets/
-    css/
-        style.css
-    js/
-        theme.js
-        matrix.js
-    images/
-        (put your photos here)
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FRC Robot — Rowan Cleveland</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="antialiased text-slate-100">
+  <canvas id="matrix" aria-hidden="true"></canvas>
+
+  <header class="fixed w-full z-40">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-gradient-to-br from-sky-400 to-emerald-400"></div><div class="text-sm font-semibold">Rowan Cleveland</div></a>
+      <nav class="site-nav hidden md:flex gap-6">
+        <a href="/projects/frc/" class="active">Projects</a>
+        <a href="/about/">About</a>
+        <button data-theme-toggle class="px-3 py-1 rounded-md bg-slate-800/30">Theme</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-6 py-28 relative z-10">
+    <div class="project-hero mb-8" style="background-image:url('https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=2000');"></div>
+
+    <article class="glass p-8 rounded-xl">
+      <h1 class="text-2xl font-bold">FRC Robot — Drive & Manipulator</h1>
+      <p class="mt-4 text-slate-200/80">Overview: Full CAD, BOM, control strategies, and test results. This project focuses on modular design and reliability under competition constraints.</p>
+
+      <h4 class="mt-6 font-semibold">Deliverables</h4>
+      <ul class="list-disc pl-6 mt-2 text-slate-200/80">
+        <li>CAD assemblies and part files</li>
+        <li>Bill of Materials</li>
+        <li>Autonomous path tests</li>
+      </ul>
+
+      <h4 class="mt-6 font-semibold">Media & downloads</h4>
+      <div class="mt-3 grid md:grid-cols-3 gap-4">
+        <img src="https://images.unsplash.com/photo-1526178617000-3b7f1d6f2d78?q=80&w=800" alt="robot" class="rounded shadow-sm">
+        <img src="https://images.unsplash.com/photo-1517059224940-d4af9eec41e6?q=80&w=800" alt="cad" class="rounded shadow-sm">
+        <div class="rounded p-4 glass">
+          <strong>Download:</strong>
+          <ul class="mt-2 text-slate-200/80">
+            <li><a href="#" class="text-sky-300">CAD ZIP</a></li>
+            <li><a href="#" class="text-sky-300">BOM (CSV)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8">
+        <a href="/projects/truss/" class="text-sky-300">Next: Truss bridge study →</a>
+      </div>
+    </article>
+  </main>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
