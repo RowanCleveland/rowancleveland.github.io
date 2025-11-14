@@ -4,140 +4,171 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Rowan Cleveland — Engineering Portfolio</title>
+
   <meta name="description" content="Portfolio of Rowan Cleveland — student engineer: FRC, truss experiments, CAD and small engineering consulting." />
   <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
-    /* Small additional polish */
-    .grad { background: linear-gradient(135deg,#0ea5a4,#06b6d4); }
+    /* Parallax hero banner */
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2000');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    /* Cool gradient accent */
+    .accent {
+      background: linear-gradient(135deg, #0ea5e9 0%, #0ea5a4 100%);
+    }
+
+    /* Glassy cards */
+    .glass {
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(12px);
+    }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased">
-  <header class="grad text-white">
-    <div class="max-w-5xl mx-auto p-6 flex items-center justify-between">
-      <div class="flex items-center gap-4">
-        <!-- inline SVG logo -->
-        <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
-            <path d="M2 12h20M12 2v20" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="12" cy="12" r="3" stroke="white" stroke-width="1.2" fill="rgba(255,255,255,0.06)"/>
-          </svg>
-        </div>
-        <div>
-          <h1 class="text-xl font-semibold leading-tight">Rowan Cleveland</h1>
-          <p class="text-sm opacity-90">Student | Robotics & Structural Design | Engineering Portfolio</p>
-        </div>
-      </div>
-      <nav class="space-x-4 hidden md:block">
-        <a href="#projects" class="text-white/90 hover:underline">Projects</a>
-        <a href="#blog" class="text-white/90 hover:underline">Blog</a>
-        <a href="#about" class="text-white/90 hover:underline">About</a>
-        <a href="#contact" class="bg-white/10 px-3 py-1 rounded hover:bg-white/20">Contact</a>
+
+<body class="bg-slate-950 text-slate-100 antialiased">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full backdrop-blur-md bg-slate-900/40 z-50 border-b border-white/10">
+    <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
+      <h1 class="text-lg font-semibold tracking-tight">Rowan Cleveland</h1>
+      <nav class="space-x-6 hidden md:block text-sm">
+        <a href="#projects" class="hover:text-sky-300">Projects</a>
+        <a href="#blog" class="hover:text-sky-300">Blog</a>
+        <a href="#about" class="hover:text-sky-300">About</a>
+        <a href="#contact" class="px-3 py-1 rounded accent hover:opacity-90">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="max-w-5xl mx-auto p-6">
-    <!-- Hero -->
-    <section class="grid md:grid-cols-2 gap-6 items-center mb-8">
-      <div>
-        <h2 class="text-3xl font-bold mb-3">Engineering projects that show how I think, design, and build</h2>
-        <p class="text-slate-600 mb-4">I’m Rowan — I design competition robots, build structural models (trusses), and make CAD tools that save time. Below are projects, writeups, and resources I created to help other students and teams.</p>
-        <div class="flex gap-3">
-          <a href="#projects" class="px-4 py-2 bg-slate-900 text-white rounded">See projects</a>
-          <a href="#blog" class="px-4 py-2 border rounded">Read the blog</a>
-        </div>
+  <!-- HERO / BANNER -->
+  <section class="hero h-[90vh] flex items-center relative">
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="relative max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-5xl md:text-6xl font-bold mb-4 tracking-tight">
+        Engineering with clarity, creativity, and precision.
+      </h2>
+      <p class="text-lg opacity-90 max-w-2xl mx-auto">
+        I build competition robots, run structural tests, and design tools that help make engineering simpler.
+      </p>
+      <div class="mt-6 flex justify-center gap-4">
+        <a href="#projects" class="px-5 py-2 accent rounded text-slate-900 font-semibold">Explore Projects</a>
+        <a href="#about" class="px-5 py-2 border border-white/30 rounded hover:bg-white/10">About Me</a>
       </div>
-      <div class="bg-white rounded shadow p-4">
-        <img alt="FRC robot CAD screenshot placeholder" src="https://images.unsplash.com/photo-1581091012184-7f0d0b1c1a9c?q=80&w=1200&auto=format&fit=crop&crop=entropy" class="w-full h-56 object-cover rounded">
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Projects -->
-    <section id="projects" class="mb-12">
-      <h3 class="text-2xl font-semibold mb-4">Selected projects</h3>
-      <div class="grid md:grid-cols-2 gap-6">
-        <article class="bg-white p-5 rounded shadow-sm">
-          <h4 class="font-semibold">FRC Robot — Drive & Manipulator</h4>
-          <p class="text-sm text-slate-600 mb-3">Designed drivebase, intake, and manipulator. Full CAD, BOM, and control strategy documented.</p>
-          <ul class="text-sm text-slate-600">
+  <main class="max-w-6xl mx-auto px-6 py-12">
+
+    <!-- PROJECTS -->
+    <section id="projects" class="mb-20">
+      <h3 class="text-3xl font-bold mb-6">Selected Projects</h3>
+
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <article class="glass p-6 rounded-xl shadow-xl">
+          <h4 class="text-xl font-semibold">FRC Robot — Drive & Manipulator</h4>
+          <p class="text-slate-200/80 mt-2">
+            Designed drivebase, intake, and manipulator. Full CAD, BOM, and control strategy documented.
+          </p>
+          <ul class="text-slate-300 mt-3 text-sm space-y-1">
             <li><strong>Tools:</strong> SolidWorks, WPILib</li>
             <li><strong>Highlights:</strong> Lightweight chassis, modular intake, autonomous path tests</li>
           </ul>
-          <div class="mt-3"><a href="#" class="text-sky-600">Read more →</a></div>
+          <div class="mt-4"><a href="#" class="text-sky-300">Read more →</a></div>
         </article>
 
-        <article class="bg-white p-5 rounded shadow-sm">
-          <h4 class="font-semibold">Truss Bridge Strength Study</h4>
-          <p class="text-sm text-slate-600 mb-3">Empirical testing of Camelback, Pennsylvania, and Baltimore trusses across varying spans. Models, load tests, and conclusions documented.</p>
-          <ul class="text-sm text-slate-600">
+        <article class="glass p-6 rounded-xl shadow-xl">
+          <h4 class="text-xl font-semibold">Truss Bridge Strength Study</h4>
+          <p class="text-slate-200/80 mt-2">
+            Empirical testing of Camelback, Pennsylvania, and Baltimore trusses across varying spans.
+          </p>
+          <ul class="text-slate-300 mt-3 text-sm space-y-1">
             <li><strong>Deliverables:</strong> Lab report, videos, CAD models</li>
-            <li><strong>Outcome:</strong> Relationship between span and max load for three truss types</li>
+            <li><strong>Outcome:</strong> Relationship between span and max load</li>
           </ul>
-          <div class="mt-3"><a href="#" class="text-sky-600">Read the report →</a></div>
+          <div class="mt-4"><a href="#" class="text-sky-300">Read the report →</a></div>
         </article>
 
-        <article class="bg-white p-5 rounded shadow-sm">
-          <h4 class="font-semibold">Micro Consulting — CAD Templates</h4>
-          <p class="text-sm text-slate-600 mb-3">Made a pack of CAD templates and basic robot mechanisms for local teams to reuse and adapt.</p>
-          <div class="mt-3"><a href="#" class="text-sky-600">Download templates →</a></div>
+        <article class="glass p-6 rounded-xl shadow-xl">
+          <h4 class="text-xl font-semibold">Micro Consulting — CAD Templates</h4>
+          <p class="text-slate-200/80 mt-2">
+            Created a pack of CAD templates used by local robotics teams to speed up prototyping workflows.
+          </p>
+          <div class="mt-4"><a href="#" class="text-sky-300">Download templates →</a></div>
         </article>
 
-        <article class="bg-white p-5 rounded shadow-sm">
-          <h4 class="font-semibold">Engineering Notes — Tutorials</h4>
-          <p class="text-sm text-slate-600 mb-3">Short guides: choosing truss types, basics of finite elements (intro-level), and CAD best practices for teams.</p>
-          <div class="mt-3"><a href="#" class="text-sky-600">View tutorials →</a></div>
+        <article class="glass p-6 rounded-xl shadow-xl">
+          <h4 class="text-xl font-semibold">Engineering Notes — Tutorials</h4>
+          <p class="text-slate-200/80 mt-2">
+            Tutorials covering truss choices, intro finite elements, and CAD best practices for teams.
+          </p>
+          <div class="mt-4"><a href="#" class="text-sky-300">View tutorials →</a></div>
         </article>
+
       </div>
     </section>
 
-    <!-- Blog -->
-    <section id="blog" class="mb-12">
-      <h3 class="text-2xl font-semibold mb-4">Latest posts</h3>
-      <div class="grid md:grid-cols-3 gap-4">
-        <article class="bg-white p-4 rounded shadow-sm">
-          <h5 class="font-semibold">Why I tested three truss types (and how I did it)</h5>
-          <p class="text-sm text-slate-600 mt-2">A brief walkthrough of the experiment design, variables controlled, and key takeaways for model builders.</p>
-          <div class="mt-3 text-sm"><a href="#post1" class="text-sky-600">Read →</a></div>
+    <!-- BLOG -->
+    <section id="blog" class="mb-20">
+      <h3 class="text-3xl font-bold mb-6">Latest Posts</h3>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <article class="glass p-4 rounded-xl shadow-xl">
+          <h5 class="font-semibold text-lg">Why I tested three truss types</h5>
+          <p class="text-slate-200/80 mt-2">Walkthrough of experiment design, variables controlled, and key takeaways.</p>
+          <a href="#" class="text-sky-300 text-sm mt-3 inline-block">Read →</a>
         </article>
 
-        <article class="bg-white p-4 rounded shadow-sm">
-          <h5 class="font-semibold">3 CAD tricks that save hours in SolidWorks</h5>
-          <p class="text-sm text-slate-600 mt-2">Simple template and assembly habits I use to avoid rework during robot build season.</p>
-          <div class="mt-3 text-sm"><a href="#post2" class="text-sky-600">Read →</a></div>
+        <article class="glass p-4 rounded-xl shadow-xl">
+          <h5 class="font-semibold text-lg">3 CAD tricks to save hours</h5>
+          <p class="text-slate-200/80 mt-2">Template and assembly habits that reduce rework during robotics season.</p>
+          <a href="#" class="text-sky-300 text-sm mt-3 inline-block">Read →</a>
         </article>
 
-        <article class="bg-white p-4 rounded shadow-sm">
-          <h5 class="font-semibold">How to present an engineering project on college applications</h5>
-          <p class="text-sm text-slate-600 mt-2">What admissions officers actually want to see — and how to phrase it without overselling.</p>
-          <div class="mt-3 text-sm"><a href="#post3" class="text-sky-600">Read →</a></div>
+        <article class="glass p-4 rounded-xl shadow-xl">
+          <h5 class="font-semibold text-lg">How to present engineering projects</h5>
+          <p class="text-slate-200/80 mt-2">What colleges actually want to see — and how to phrase it.</p>
+          <a href="#" class="text-sky-300 text-sm mt-3 inline-block">Read →</a>
         </article>
+
       </div>
     </section>
 
-    <!-- About / Contact -->
-    <section id="about" class="mb-12">
-      <div class="bg-white p-6 rounded shadow-sm">
-        <h3 class="text-2xl font-semibold">About me</h3>
-        <p class="text-slate-600 mt-3">I’m Rowan Cleveland — a high school student focused on robotics, structural testing, and practical CAD workflows. I lead design in my FRC team and run a small set of CAD templates that other teams use.</p>
-        <p class="text-slate-600 mt-2">If you'd like files or to collaborate, check the contact section below.</p>
+    <!-- ABOUT -->
+    <section id="about" class="mb-20">
+      <div class="glass p-8 rounded-xl shadow-xl">
+        <h3 class="text-3xl font-bold">About Me</h3>
+        <p class="text-slate-200/90 mt-4">
+          I’m Rowan Cleveland — a high school student focused on engineering, robotics, structural testing,
+          and practical CAD workflows. I lead design on my FRC team and maintain CAD templates used by multiple teams.
+        </p>
       </div>
     </section>
 
-    <section id="contact" class="mb-12">
-      <div class="bg-white p-6 rounded shadow-sm">
-        <h3 class="text-2xl font-semibold">Contact</h3>
-        <p class="text-slate-600 mt-2">Email: <strong>rowan.cleveland@example.com</strong> (replace with your email)</p>
-        <p class="text-slate-600 mt-2">Or link to your GitHub / LinkedIn here.</p>
+    <!-- CONTACT -->
+    <section id="contact" class="mb-20">
+      <div class="glass p-8 rounded-xl shadow-xl">
+        <h3 class="text-3xl font-bold">Contact</h3>
+        <p class="text-slate-200/90 mt-3">Email: <strong>rowan.cleveland@example.com</strong></p>
+        <p class="text-slate-200/70 mt-2">GitHub / LinkedIn links can go here.</p>
       </div>
     </section>
 
-    <footer class="text-center text-sm text-slate-500 py-6">
+    <footer class="text-center text-sm text-slate-400 py-8">
       Built by Rowan Cleveland · © <span id="yr"></span>
     </footer>
+
   </main>
 
   <script>
     document.getElementById('yr').textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
