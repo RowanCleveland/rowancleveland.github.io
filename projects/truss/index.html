@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Truss Bridge Study — Rowan Cleveland</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="antialiased text-slate-100">
+  <canvas id="matrix" aria-hidden="true"></canvas>
+
+  <header class="fixed w-full z-40">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-gradient-to-br from-sky-400 to-emerald-400"></div><div class="text-sm font-semibold">Rowan Cleveland</div></a>
+      <nav class="site-nav hidden md:flex gap-6">
+        <a href="/projects/frc/">Projects</a>
+        <a href="/about/">About</a>
+        <button data-theme-toggle class="px-3 py-1 rounded-md bg-slate-800/30">Theme</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 py-28 relative z-10">
+    <div class="project-hero mb-8" style="background-image:url('https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=2000');"></div>
+
+    <article class="glass p-8 rounded-xl">
+      <h1 class="text-2xl font-bold">Truss Bridge Strength Study</h1>
+      <p class="mt-4 text-slate-200/80">Empirical testing comparing Camelback, Pennsylvania, and Baltimore truss types at multiple spans. Includes models, test videos, and the final lab report.</p>
+
+      <h4 class="mt-6 font-semibold">What I tested</h4>
+      <ul class="list-disc pl-6 mt-2 text-slate-200/80">
+        <li>Span variations and max load</li>
+        <li>Failure modes for each truss</li>
+        <li>Data, charts, and discussion</li>
+      </ul>
+
+      <h4 class="mt-6 font-semibold">Results snapshot</h4>
+      <p class="mt-2 text-slate-200/80">(Insert chart or embed PDF here)</p>
+
+      <div class="mt-8">
+        <a href="/projects/cad/" class="text-sky-300">Next: CAD templates →</a>
+      </div>
+    </article>
+  </main>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
