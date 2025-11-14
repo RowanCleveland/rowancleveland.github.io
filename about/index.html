@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Rowan Cleveland</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="antialiased text-slate-100">
+
+  <canvas id="matrix" aria-hidden="true"></canvas>
+
+  <header class="fixed w-full z-40">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-br from-sky-400 to-emerald-400 shadow-lg"></div>
+        <div class="text-sm"><div class="font-semibold">Rowan Cleveland</div></div>
+      </a>
+      <nav class="site-nav hidden md:flex gap-6">
+        <a href="/projects/frc/">Projects</a>
+        <a href="/about/" class="active">About</a>
+        <button data-theme-toggle class="px-3 py-1 rounded-md bg-slate-800/30">Theme</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-28 relative z-10">
+    <div class="glass p-8 rounded-xl">
+      <h1 class="text-3xl font-bold">About me</h1>
+      <p class="mt-4 text-slate-200/90">I’m Rowan Cleveland — a high school student focused on engineering, robotics, structural testing, and practical CAD workflows. I lead design on my FRC team and maintain CAD templates used by local teams.</p>
+
+      <h3 class="mt-6 text-xl font-semibold">What I work on</h3>
+      <ul class="list-disc pl-6 mt-2 text-slate-200/80">
+        <li>Competition robot design & control</li>
+        <li>Structural model testing (truss bridges)</li>
+        <li>CAD templates, automation, and documentation</li>
+      </ul>
+
+      <h3 class="mt-6 text-xl font-semibold">Contact</h3>
+      <p class="mt-2 text-slate-200/80">Email: <strong>rowan.cleveland@example.com</strong></p>
+      <p class="mt-1 text-slate-200/80">GitHub / LinkedIn: add links here</p>
+    </div>
+  </main>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
